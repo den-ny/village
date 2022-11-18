@@ -25,7 +25,7 @@ const Upload = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       
-      <CloseModal nav={navigation} />
+      {/* <CloseModal nav={navigation} /> */}
       <View
         style={{
           flex: 1,
@@ -42,7 +42,7 @@ const Upload = ({ navigation }) => {
         <Button title=""></Button>
       </View>
       {/* {redo ? <Button title="Redo" onPress={pickImage} /> : null} */}
-      {/* <Next to="loading" nav={navigation} text="NEXT" /> */}
+      <Button title="HOME" onPress = {() => navigation.navigate("home")}></Button>
     </SafeAreaView>
   );
 };
