@@ -4,9 +4,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import {
-    Main,
+    Home,
     Upload,
     Capture,
+    Register,
+    Login
   } from "./screens";
 
 
@@ -15,10 +17,15 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        {/* <Stack.Screen name="home" component={Main} /> */}
+      <Stack.Navigator screenOptions={{ headerShown: true }}>
         {/* <Stack.Screen name="capture" component={Capture} /> */}
-        <Stack.Screen name="photos" component={Upload} />
+        {/* <Stack.Screen name="photos" component={Upload} /> */}
+        {/* <Stack.Screen name="SignUp" component={Register} /> */}
+        
+        {/* signin */}
+        <Stack.Screen name="Login" component={Login}/> 
+        
+        <Stack.Screen name="home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );
