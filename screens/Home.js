@@ -1,4 +1,19 @@
 import { StyleSheet, SafeAreaView, Text, View, Button, Image, StatusBar, Pressable } from "react-native";
+import { useEffect, useState } from 'react';
+import { getPosts } from "../services/posts";
+
+// const Posts = () => {
+//   const [posts, setPosts] = useState([]);
+
+//   useEffect(() => {
+//     const fetchPosts = async () => {
+//       const postsData = await getPosts();
+//       setPosts(postsData);
+//     };
+
+//     fetchPosts();
+//   }, []);
+// }
 
 const Home = ({ navigation, route }) => {
     <SafeAreaView style={styles.container}>
