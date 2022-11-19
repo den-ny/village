@@ -20,10 +20,10 @@ export default function App() {
       <Stack.Navigator screenOptions={{ headerShown: true }}>
         {/* <Stack.Screen name="capture" component={Capture} /> */}
         {/* <Stack.Screen name="photos" component={Upload} /> */}
-        <Stack.Screen name="SignUp" component={Register} />
+        {/* <Stack.Screen name="SignUp" component={Register} /> */}
         
         {/* signin */}
-        <Stack.Screen name="Login" component={Login}/> 
+        {/* <Stack.Screen name="Login" component={Login}/>  */}
         
         <Stack.Screen name="home" component={Home} />
       </Stack.Navigator>

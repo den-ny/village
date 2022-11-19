@@ -133,12 +133,13 @@ function Login({navigation}) {
       },
      
       inputView: {
-        backgroundColor: "#FFC0CB",
+        backgroundColor: "#fff",
         borderRadius: 30,
+        borderWidth: 1,
+        borderColor: "#978DF3",
         width: "70%",
         height: 45,
         marginBottom: 20,
-     
         alignItems: "center",
       },
      
@@ -161,7 +162,7 @@ function Login({navigation}) {
         alignItems: "center",
         justifyContent: "center",
         marginTop: 40,
-        backgroundColor: "#FF1493",
+        backgroundColor: "#978DF3",
       },
 
       top:{
@@ -196,8 +197,7 @@ function Login({navigation}) {
 
       categories: {
         flex: 1,
-        flexDirection: "row",
-        flexWrap: "wrap",
+        flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         width: "100%",
@@ -213,7 +213,47 @@ function Login({navigation}) {
         borderWidth: 1,
         borderRadius: 25,
         borderColor: "gray"
-      }
+      },
+
+      categoriesTop: {
+        flex: 1,
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 10,
+        height: "100%",
+        width: "100%",
+      },
+
+      categoriesMidOne: {
+        flex: 1,
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 10,
+        height: "100%",
+        width: "100%",
+      },
+
+      categoriesMidTwo: {
+        flex: 1,
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 10,
+        height: "100%",
+        width: "100%",
+      },
+
+      categoriesBottom: {
+        flex: 1,
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 10,
+        height: "100%",
+        width: "100%",
+      },
 
     });
 
