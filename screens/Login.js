@@ -8,6 +8,7 @@ import {
   TextInput,
   Button,
   TouchableOpacity,
+  Pressable
 } from "react-native";
 
 function Login({navigation}) {
@@ -15,7 +16,13 @@ function Login({navigation}) {
     const [password, setPassword] = useState('');
     return (
         <View style={styles.container}>
-          {/* <Image style={styles.image} source={require("../assets/.png")} /> */}
+        {/* <Image style={styles.image} source={require("../assets/.png")} /> */}
+        
+
+          <Text style={styles.header}>Welcome Back!</Text>
+
+          
+
           <Text>Image here </Text>
      
           <StatusBar style="auto" />
@@ -42,9 +49,9 @@ function Login({navigation}) {
             <Text style={styles.forgot_button}>Forgot Password?</Text>
           </TouchableOpacity> */}
      
-          <TouchableOpacity style={styles.loginBtn}>
-            <Button style={styles.loginText} title="LOGIN" onPress = {() => navigation.navigate("home")}></Button>
-          </TouchableOpacity>
+          <Pressable style={styles.loginBtn}>
+          <Text style={styles.loginText} title="Log In" onPress={() => navigation.navigate("home")}>Log In</Text>
+          </Pressable>
         </View>
       );
     }
@@ -62,8 +69,10 @@ function Login({navigation}) {
       },
      
       inputView: {
-        backgroundColor: "#FFC0CB",
+        backgroundColor: "#fff",
         borderRadius: 30,
+        borderWidth: 1,
+        borderColor: "gray",
         width: "70%",
         height: 45,
         marginBottom: 20,
@@ -84,14 +93,30 @@ function Login({navigation}) {
       },
      
       loginBtn: {
-        width: "80%",
+        width: "60%",
         borderRadius: 25,
         height: 50,
         alignItems: "center",
         justifyContent: "center",
         marginTop: 40,
-        backgroundColor: "#FF1493",
+        color: "#fff",
+        backgroundColor: "#978DF3",
+        marginTop: 100
       },
+
+      loginText: {
+        color: "#fff",
+      },
+
+      header: {
+        fontSize: 36,
+        fontWeight: "bold",
+        marginBottom: 100,
+        color: "#978DF3",
+        fontFamily: "Times New Roman",
+      }
+
+
     });
 
     export default Login;
