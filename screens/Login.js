@@ -106,6 +106,8 @@ function Login({navigation}) {
 
       loginText: {
         color: "#fff",
+        fontSize: 20,
+        fontWeight: "semi-bold"
       },
 
       header: {
