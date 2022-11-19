@@ -9,6 +9,7 @@ import {
   Button,
   TouchableOpacity,
   SafeAreaView,
+  Pressable
 } from "react-native";
 
 function Login({navigation}) {
@@ -17,27 +18,62 @@ function Login({navigation}) {
     const [password, setPassword] = useState('');
     return (
         <SafeAreaView style={styles.container}>
-          {/* <Image style={styles.image} source={require("../assets/.png")} /> */}
-          <View>
+        {/* <Image style={styles.image} source={require("../assets/.png")} /> */}
+        
+          <View style={styles.navbar}>
               <Button title="MENU BUtton"></Button>
               <Text>The Village</Text>
               <Button title="Pic"></Button>
-          </View>
-          <Text>What are you looking for? </Text>
+        </View>
+        
+        <View style={styles.headerTopContainer}>
+          <Text style={styles.headerTop}>What are you looking for? </Text>
+        </View>
            
-           <Button title="Clothing"></Button>
-           <Button title="Toys"></Button>
-           <Button title="Books"></Button>
-{/* 
-           <Button title="Coat"></Button>
-           <Button title="Shoes"></Button>
+        <View style={styles.categories}>
+          <View style={styles.categoriesTop}>
+            <Pressable style={styles.categoryBtn}>
+            <Text style={styles.loginText} title="Clothing">Clothing</Text>
+            </Pressable>
+            <Pressable style={styles.categoryBtn}>
+            <Text style={styles.loginText} title="Toys">Toys</Text>
+            </Pressable>
+            <Pressable style={styles.categoryBtn}>
+            <Text style={styles.loginText} title="Books">Books</Text>
+            </Pressable>
+          </View>
 
-           <Button title="Education"></Button>
-           <Button title="Infant"></Button>
-           <Button title="Stuffed"></Button>
+          <View style={styles.categoriesMidOne}>
+            <Pressable style={styles.categoryBtn}>
+            <Text style={styles.loginText} title="Coats">Coats</Text>
+            </Pressable>
+            <Pressable style={styles.categoryBtn}>
+            <Text style={styles.loginText} title="Shoes">Shoes</Text>
+            </Pressable>
+          </View>
 
-           <Button title="Games"></Button>
-           <Button title="Toddler"></Button> */}
+          <View style={styles.categoriesMidTwo}>
+            <Pressable style={styles.categoryBtn}>
+            <Text style={styles.loginText} title="Education">Education</Text>
+            </Pressable>
+            <Pressable style={styles.categoryBtn}>
+            <Text style={styles.loginText} title="Infant">Infant</Text>
+            </Pressable>
+            <Pressable style={styles.categoryBtn}>
+            <Text style={styles.loginText} title="Stuffed">Stuffed</Text>
+            </Pressable>
+          </View>
+
+          <View style={styles.categoriesBottom}>
+            <Pressable style={styles.categoryBtn}>
+            <Text style={styles.loginText} title="Games">Games</Text>
+            </Pressable>
+            <Pressable style={styles.categoryBtn}>
+            <Text style={styles.loginText} title="Toddler">Toddler</Text>
+            </Pressable>
+          </View>
+        </View>
+
            
             <Text>Tell us about yourself</Text>
           <StatusBar style="auto" />
@@ -86,6 +122,7 @@ function Login({navigation}) {
     const styles = StyleSheet.create({
       container: {
         flex: 1,
+        flexDirection: "column",
         backgroundColor: "#fff",
         alignItems: "center",
         justifyContent: "center",
@@ -126,11 +163,58 @@ function Login({navigation}) {
         marginTop: 40,
         backgroundColor: "#FF1493",
       },
+
       top:{
         backgroundColor: "red",
         // flexDirection: "column",
-        flex: 1
+        flex: 1,
+      },
+
+      navbar: {
+        flex: 1,
+        flexDirection: "row",
+        alignItems: "flex-start",
+        justifyContent: "space-between",
+        height: 45,
+        width: "100%",
+      },
+
+      headerTopContainer: {
+        flex: 1,
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        width: "100%",
+        height: "100%",
+        marginLeft: 40,
+      },
+
+      headerTop: {
+        fontSize: 20,
+        fontWeight: "400",
+        fontFamily: "Times New Roman"
+      },
+
+      categories: {
+        flex: 1,
+        flexDirection: "row",
+        flexWrap: "wrap",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%",
+        borderWidth: 1,
+        borderRadius: 25,
+        borderColor: "gray"
+      },
+
+      categoryBtn: {
+        justifyContent: "center",
+
+        // width: "100%",
+        borderWidth: 1,
+        borderRadius: 25,
+        borderColor: "gray"
       }
+
     });
 
     export default Login;
