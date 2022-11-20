@@ -20,10 +20,13 @@ function ProductInfo({navigation}) {
           
 
         <View>
-            <Text style={styles.image}> Profile Picture </Text>
-            <Text>Name</Text>
-            <Text>Karma Points | Hand Icon</Text>  
-            <Text>+ Points</Text>
+          <View style={styles.imgContainer}>
+
+          <Image source={require('../images/temporary-coat.jpg')} style={styles.image}/>
+          </View>
+            <Text style={styles.productName}>Winter Coat</Text>
+            <Text style={styles.location}>Columbus, OH</Text>  
+            <Text style={styles.productDescription}>Like-new, gently used winter coat for ages 1-2 years. Bought for my nephew recently and it did not fit him. Hoping it finds someone in need!</Text>
         </View>
            <View>
         <Text> My Items     </Text>
@@ -53,12 +56,24 @@ function ProductInfo({navigation}) {
         alignItems: "center",
         justifyContent: "center",
       },
+
+      imgContainer: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "row",
+        width: "100%",
+        height: "50%"
+      },
      
       image: {
+        // flex: 1,
+        // alignItems: "center",
+        // justifyContent: "center",
         marginBottom: 40,
         borderRadius: 5,
-        backgroundColor: "red",
-        width: "20%",
+        // backgroundColor: "red",
+        width: "100%",
         padding: 50,
       },
      
