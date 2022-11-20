@@ -7,6 +7,7 @@ import Message from "./Message.js";
 import Inbox from "./Inbox.js"
 import AccountInfo from "./AccountInfo";
 import ProductInfo from "./ProductInfo"
+import Posting from "./Posting"
 
 export {
     Home,
@@ -16,5 +17,6 @@ export {
     Message,
     Inbox,
     AccountInfo,
-    ProductInfo
+    ProductInfo,
+    Posting
 }
