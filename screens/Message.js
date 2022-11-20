@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import {
   StyleSheet,
@@ -15,6 +15,21 @@ import {
 function Message({ navigation }) {
   const [message, setMessage] = useState("");
 
+  useEffect(() => {
+
+    const getData = async () => {
+      try {
+        const response = await fetch('https://ga-hackathon-backend.herokuapp.com/messages');
+        const data = await response.json();
+        setMessage(data)
+      } catch(error) {
+        console.log(error)
+      }
+    }
+
+    getData();
+  },[])
+
   return (
     <View style={styles.container}>
       {/* <Image style={styles.image} source={require("../assets/.png")} /> */}
@@ -23,15 +38,6 @@ function Message({ navigation }) {
       <Navbar />
 
       <View style={styles.subheader}>
-        <Pressable style={styles.backBtn}>
-          <Text
-            style={styles.backText}
-            title="Back"
-            onPress={() => navigation.navigate("Inbox")}
-          >
-            Back
-          </Text>
-        </Pressable>
         <Text style={styles.subheaderText}>Messages</Text>
       </View>
 
@@ -40,12 +46,23 @@ function Message({ navigation }) {
         <Text>Sender Name</Text>
       </View>
 
+      <View style={styles.recMessageContainer}>
+        <Text style={styles.recipText}>Is the rabbit white or pink?</Text>
+      </View>
 
+      <View style={styles.senderMessageContainer}>
+        <Text style={styles.senderText}>It's more like an off white.</Text>
+      </View>
+      
 
+      <View style={styles.recMessageContainer}>
+        <Text style={styles.recipText}>Do you still have the rabbit?</Text>
+      </View>
 
-      {/* <TouchableOpacity>
-            <Text style={styles.forgot_button}>Forgot Password?</Text>
-          </TouchableOpacity> */}
+      <View style={styles.senderMessageContainer}>
+        <Text style={styles.senderText}>Will send in real time</Text>
+      </View>
+      
 
     </View>
   );
