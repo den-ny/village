@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
+import Navbar from "../components/Navbar";
 import {
   StyleSheet,
   Text,
@@ -19,12 +20,13 @@ function Login({navigation}) {
     return (
         <SafeAreaView style={styles.container}>
         {/* <Image style={styles.image} source={require("../assets/.png")} /> */}
-        
-          <View style={styles.navbar}>
+
+        <Navbar />    
+          {/* <View style={styles.navbar}>
               <Button title="MENU BUtton"></Button>
               <Text>The Village</Text>
               <Button title="Pic"></Button>
-        </View>
+        </View> */}
         
         <View style={styles.headerTopContainer}>
           <Text style={styles.headerTop}>What are you looking for? </Text>
@@ -171,14 +173,14 @@ function Login({navigation}) {
         flex: 1,
       },
 
-      navbar: {
-        flex: 1,
-        flexDirection: "row",
-        alignItems: "flex-start",
-        justifyContent: "space-between",
-        height: 45,
-        width: "100%",
-      },
+      // navbar: {
+      //   flex: 1,
+      //   flexDirection: "row",
+      //   alignItems: "flex-start",
+      //   justifyContent: "space-between",
+      //   height: 45,
+      //   width: "100%",
+      // },
 
       headerTopContainer: {
         flex: 1,
