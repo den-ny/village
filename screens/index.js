@@ -5,6 +5,8 @@ import Login from "./Login"
 import Register from "./Register.js";
 import Message from "./Message.js";
 import Inbox from "./Inbox.js"
+import AccountInfo from "./AccountInfo";
+import ProductInfo from "./ProductInfo"
 
 export {
     Home,
@@ -12,6 +14,7 @@ export {
     Login,
     Register,
     Message,
-    Inbox
-    // Capture
+    Inbox,
+    AccountInfo,
+    ProductInfo
 }

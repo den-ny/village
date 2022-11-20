@@ -9,8 +9,10 @@ import {
     Capture,
     Register,
     Login,
-  Inbox,
-    Message
+    Inbox,
+    Message,
+    AccountInfo,
+    ProductInfo
   } from "./screens";
 
 
@@ -23,9 +25,11 @@ export default function App() {
         {/* <Stack.Screen name="capture" component={Capture} /> */}
         {/* <Stack.Screen name="photos" component={Upload} /> */}
         {/* <Stack.Screen name="SignUp" component={Register} /> */}
-        <Stack.Screen name="Inbox" component={Inbox} />
-        <Stack.Screen name="Message" component={Message} />
+        {/* <Stack.Screen name="Inbox" component={Inbox} /> */}
+        {/* <Stack.Screen name="Message" component={Message} /> */}
         
+        {/* <Stack.Screen name="AccountInfo" component={AccountInfo} /> */}
+        <Stack.Screen name="ProductInfo" component={ProductInfo} />
         {/* signin */}
         {/* <Stack.Screen name="Login" component={Login}/>  */}
         
