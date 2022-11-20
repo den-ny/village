@@ -1,5 +1,6 @@
 import { StyleSheet, SafeAreaView, Text, View, Button, Image, StatusBar, Pressable } from "react-native";
 import { useEffect, useState } from 'react';
+import Navbar from "../components/Navbar";
 
 const Home = ({ navigation, route }) => {
 
@@ -24,9 +25,7 @@ const Home = ({ navigation, route }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Button title="="></Button>
-      <Text>The Village</Text>
-      <Button title = ")"></Button>
+      <Navbar />
 
       <Text>{posts.Title}</Text>
       {/* <Button title="dsaiojdsaiop" onPress = {() => navigation.navigate("home")}></Button> */}

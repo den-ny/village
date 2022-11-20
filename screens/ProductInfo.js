@@ -18,7 +18,7 @@ function ProductInfo({navigation}) {
           {/* <Image style={styles.image} source={require("../assets/.png")} /> */}
      
           
-            <Navbar/>
+
         <View>
             <Text style={styles.image}> Profile Picture </Text>
             <Text>Name</Text>
