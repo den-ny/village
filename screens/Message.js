@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
+import Navbar from "../components/Navbar";
 import {
   StyleSheet,
   Text,
@@ -19,24 +20,19 @@ function Message({ navigation }) {
       {/* <Image style={styles.image} source={require("../assets/.png")} /> */}
     <StatusBar style="auto" />
 
-      <View style={styles.navbar}>
-        <Button title="MENU BUtton"></Button>
-        <Text>The Village</Text>
-        <Button title="Pic"></Button>
-      </View>
+      <Navbar />
 
       <View style={styles.subheader}>
-        <Pressable style={styles.loginBtn}>
+        <Pressable style={styles.backBtn}>
           <Text
-            style={styles.loginText}
+            style={styles.backText}
             title="Back"
-            // CHANGE NAV TO INBOX
-            onPress={() => navigation.navigate("home")}
+            onPress={() => navigation.navigate("Inbox")}
           >
             Back
           </Text>
         </Pressable>
-        <Text style={styles.header}>Messages</Text>
+        <Text style={styles.subheaderText}>Messages</Text>
       </View>
 
       <View style={styles.sender}>

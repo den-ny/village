@@ -21,8 +21,6 @@ function Login({navigation}) {
 
           <Text style={styles.header}>Welcome Back!</Text>
 
-          
-
           <Text>Image here </Text>
      
           <StatusBar style="auto" />
