@@ -1,5 +1,6 @@
-
-
+import { useNavigation } from "@react-navigation/native";
+import { Ionicons } from "@expo/vector-icons";
+import { EvilIcons, AntDesign, FontAwesome } from "@expo/vector-icons";
 import {
   StyleSheet,
   Text,
@@ -8,34 +9,65 @@ import {
   TextInput,
   Button,
   TouchableOpacity,
-  Pressable
+  Pressable,
+  ImageBackground,
 } from "react-native";
 
-const FooterNav = () => {
+const FooterNav = ({ color }) => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.navbar}>
       <Pressable style={styles.homeBtnContainer}>
-       <Image source={require('../images/home-icon.png')} style={styles.homeBtn} title="Home" onPress={() => navigation.navigate("home")}/>
+        <FontAwesome
+          name="home"
+          size={36}
+          color="#B9D4DC"
+          onPress={() => navigation.navigate("home")}
+        />
       </Pressable>
 
       <Pressable style={styles.notiBtnContainer}>
-      <Image source={require('../images/noti-icon.png')} style={styles.notiBtn} title="Notifications" onPress={() => navigation.navigate("")}/>
+        <Ionicons
+          name="notifications-outline"
+          size={36}
+          color="#B9D4DC"
+          onPress={() => navigation.navigate("")}
+        />
       </Pressable>
 
       <Pressable style={styles.postBtnContainer}>
-      <Image source={require('../images/post-icon.png')} style={styles.postBtn} title="Posting" onPress={() => navigation.navigate("Posting")}/>
+        <AntDesign
+          name="pluscircle"
+          size={40}
+          color="#B9B1FF"
+          style={styles.postBtn}
+          onPress={() => navigation.navigate("Posting")}
+        />
       </Pressable>
 
-    <Pressable style={styles.searchBtnContainer}>
-    <Image source={require('../images/search-icon.png')} style={styles.searchBtn} title="Search" onPress={() => navigation.navigate("")}/>
+      <Pressable style={styles.searchBtnContainer}>
+        <AntDesign
+          name="search1"
+          size={36}
+          color="#B9D4DC"
+          onPress={() => navigation.navigate("")}
+          style={styles.searchBtn}
+        />
       </Pressable>
 
       <Pressable style={styles.msgBtnContainer}>
-    <Image source={require('../images/msg-icon.png')} style={styles.msgBtn} title="Message" onPress={() => navigation.navigate("Inbox")}/>
+        <AntDesign
+          name="message1"
+          size={36}
+          color="#B9D4DC"
+          style={styles.msgBtn}
+          onPress={() => navigation.navigate("Inbox")}
+        />
       </Pressable>
-  </View>
-  )
-}
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   navbar: {
@@ -49,10 +81,22 @@ const styles = StyleSheet.create({
     borderRadius: 25,
   },
 
+  footNavText: {
+    fontSize: 48,
+    zIndex: 0,
+  },
+
+  homeTextBtn: {
+    zIndex: 0,
+  },
+
+  homeBtn: {
+    zIndex: 1000,
+  },
+
   // homeBtnContainer: {
   //   width: "20%"
   // },
-
-})
+});
 
 export default FooterNav;
