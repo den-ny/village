@@ -20,33 +20,35 @@ function AccountInfo({ navigation }) {
       <StatusBar style="auto" />
       {/* <Image style={styles.image} source={require("../assets/.png")} /> */}
 
-      
-        <View style={styles.navBar}>
+      {/* NavBar */}
+        {/* <View style={styles.navBar}>
             <Button title="="></Button>
             <Text>Karen T </Text>
             <Button title="Setting"></Button>
-        </View>
+        </View> */}
       {/* List of messages */}
 
-      
-        <View style={styles.profile}>
-          <View style={styles.left}>
-            <Text>Profile Pic</Text>
-          </View>
-          <View style={styles.right}>
-            <Text style={styles.lineOne}>Karma Points</Text>
-            <Text style={styles.lineTwo}>ICON 320KP</Text>
-            {/* <Text style={styles.lineThree}>Location</Text> */}
-          </View>
+      {/* Profile Info Section */}
+      <View style={styles.profile}>
+        <View style={styles.profile_left}>
+          <Text style={styles.profile_image}>Profile Pic</Text>
         </View>
+        <View style={styles.profile_right}>
+          <Text style={styles.profile_lineOne}>Karma Points</Text>
+          <Text style={styles.profile_lineTwo}>320 KP</Text>
+          <Text style={styles.profile_lineThree}>Columbus, OH</Text>
+          {/* <Text style={styles.lineThree}>Location</Text> */}
+        </View>
+      </View>
       
-
+      {/* My Posts Section */}
       <View style={styles.myPost}>
         <Text>My Posts:</Text>
         <Text>BEAR</Text>
         <Text>Rocking Horse</Text>
       </View>
 
+      {/* Looking For Section */}
       <View style={styles.lookingFor}>
         <Text>Looking For:</Text>
         <Text>Winter Coat</Text>
@@ -59,7 +61,7 @@ function AccountInfo({ navigation }) {
             <Text style={styles.forgot_button}>Forgot Password?</Text>
           </TouchableOpacity> */}
 
-      <Pressable style={styles.loginBtn}>
+      {/* <Pressable style={styles.loginBtn}>
         <Text
           style={styles.loginText}
           title="Log In"
@@ -67,21 +69,94 @@ function AccountInfo({ navigation }) {
         >
           Log In
         </Text>
-      </Pressable>
+      </Pressable> */}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+
+  /* &&&&&&&&&&&&&&&&&&& Major Views Styles &&&&&&&&&&&&&&&&&&& */
+
+  //Big Container
   container: {
-    flex: 1,
+    flexDirection: "column",
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-start",
+    width: '100%',
+    height: '100%'
   },
 
+  //Navbar
+  navBar: {
+    backgroundColor: "#6AFF4D",
+    width: "100%",
+    flex: 1
+  },
+
+  //Profile View
+  profile: {
+    backgroundColor: "red",
+    width: "100%",
+    flex: 1,
+    flexDirection:'row',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+
+  //My Posts
+  myPost: {
+    backgroundColor: "orange",
+    width: '100%',
+    flex: 1
+  },
+
+  //Looking For
+  lookingFor: {
+    backgroundColor: "yellow",
+    width: '100%',
+    flex: 1.3
+  },
+
+  /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Child Styles &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+  /* !!!!!!!!!!!!!!!!! Profile !!!!!!!!!!!!!!!!! */
+  profile_left: {
+    backgroundColor: '#99BBFF',
+    height: '90%',
+    width: '45%',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+
+  profile_image: {
+    width: '90%',
+    height: '90%',
+    borderRadius: '50%',
+    backgroundColor: '#FF6619'
+  },
+
+  profile_right: {
+    backgroundColor: '#FF99EE',
+    height: '90%',
+    width: '45%',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'center'
+  },
+
+  profile_lineOne: {
+
+  },
+
+  /* !!!!!!!!!!!!!!!!! My Posts !!!!!!!!!!!!!!!!! */
+
+
+  /* !!!!!!!!!!!!!!!!! Looking For !!!!!!!!!!!!!!!!! */
+
   image: {
-    marginBottom: 40,
+    marginBottom: 40,  
   },
 
   inputView: {
