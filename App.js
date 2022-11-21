@@ -25,14 +25,14 @@ export default function App() {
       <Stack.Navigator screenOptions={{ headerShown: true }}>
         {/* <Stack.Screen name="capture" component={Capture} /> */}
         {/* <Stack.Screen name="SignUp" component={Register} /> */}
-        {/* <Stack.Screen name="Inbox" component={Inbox} /> */}
+        <Stack.Screen name="Inbox" component={Inbox} />
         {/* <Stack.Screen name="Message" component={Message} /> */}
         
         {/* <Stack.Screen name="AccountInfo" component={AccountInfo} /> */}
         {/* <Stack.Screen name="ProductInfo" component={ProductInfo} /> */}
         
-        <Stack.Screen name="Posting" component={Posting} />
-        <Stack.Screen name="Upload" component={Upload} />
+        {/* <Stack.Screen name="Posting" component={Posting} />
+        <Stack.Screen name="Upload" component={Upload} /> */}
         {/* signin */}
         {/* <Stack.Screen name="Login" component={Login}/>  */}
         
