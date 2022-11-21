@@ -13,11 +13,11 @@ const Navbar = () => {
   return (
     <View style={styles.navbar}>
       <Pressable style={styles.burgerMenu}>
-       <Text style={styles.burgerMenuTwo} title="Hamburger" onPress={() => navigation.navigate("home")}>Burger</Text>
+       <Text style={styles.burgerMenuTwo} title="Hamburger" onPress={() => navigation.navigate("home")}></Text>
       </Pressable>
-    <Text>The Village</Text>
+    <Text style={styles.title}>Village</Text>
     <Pressable style={styles.profileIcon}>
-       <Text style={styles.iconImage} title="Profile Icon" onPress={() => navigation.navigate("home")}>Icon Pic</Text>
+       <Text style={styles.iconImage} title="Profile Icon" onPress={() => navigation.navigate("home")}></Text>
       </Pressable>
   </View>
   )
@@ -32,6 +32,14 @@ const styles = StyleSheet.create({
     height: 45,
     width: "100%",
   },
+
+  title: {
+    fontSize: 28,
+    marginBottom: -5,
+    fontFamily: "Times New Roman",
+    padding: -15,
+    fontWeight: "450"
+  }
 })
 
 export default Navbar;
