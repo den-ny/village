@@ -15,21 +15,23 @@ const FooterNav = () => {
   return (
     <View style={styles.navbar}>
       <Pressable style={styles.homeBtnContainer}>
-       <Text style={styles.homeBtn} title="Home" onPress={() => navigation.navigate("home")}>Home</Text>
+       <Image source={require('../images/home-icon.png')} style={styles.homeBtn} title="Home" onPress={() => navigation.navigate("home")}/>
       </Pressable>
 
-    <Pressable style={styles.msgBtnContainer}>
-       <Text style={styles.msgBtn} title="Messages" onPress={() => navigation.navigate("Inbox")}>Messages</Text>
+      <Pressable style={styles.notiBtnContainer}>
+      <Image source={require('../images/noti-icon.png')} style={styles.notiBtn} title="Notifications" onPress={() => navigation.navigate("")}/>
       </Pressable>
+
       <Pressable style={styles.postBtnContainer}>
-       <Text style={styles.postBtn} title="Hamburger" onPress={() => navigation.navigate("")}>+</Text>
+      <Image source={require('../images/post-icon.png')} style={styles.postBtn} title="Posting" onPress={() => navigation.navigate("Posting")}/>
       </Pressable>
 
     <Pressable style={styles.searchBtnContainer}>
-       <Text style={styles.searchBtn} title="Profile Icon" onPress={() => navigation.navigate("")}>Search</Text>
+    <Image source={require('../images/search-icon.png')} style={styles.searchBtn} title="Search" onPress={() => navigation.navigate("")}/>
       </Pressable>
-      <Pressable style={styles.acctBtnContainer}>
-       <Text style={styles.acctBtn} title="Profile Icon" onPress={() => navigation.navigate("AccountInfo")}>Account</Text>
+
+      <Pressable style={styles.msgBtnContainer}>
+    <Image source={require('../images/msg-icon.png')} style={styles.msgBtn} title="Message" onPress={() => navigation.navigate("Inbox")}/>
       </Pressable>
   </View>
   )
@@ -42,10 +44,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-evenly",
     height: 45,
-    width: "80%",
-    backgroundColor: "#FFFEF8",
+    width: "85%",
+    backgroundColor: "#f4f4fc",
     borderRadius: 25,
   },
+
+  // homeBtnContainer: {
+  //   width: "20%"
+  // },
+
 })
 
 export default FooterNav;
