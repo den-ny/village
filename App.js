@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import {
+    Landing,
     Home,
     Upload,
     Capture,
@@ -23,6 +24,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: true }}>
+        <Stack.Screen name="Landing" component={Landing} />
         {/* <Stack.Screen name="capture" component={Capture} /> */}
         {/* <Stack.Screen name="SignUp" component={Register} /> */}
         {/* <Stack.Screen name="Inbox" component={Inbox} /> */}

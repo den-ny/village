@@ -1,3 +1,4 @@
+import Landing from './Landing';
 import Home from "./Home";
 import Upload from "./Upload";
 // import Capture from "./Capture";
@@ -10,6 +11,7 @@ import ProductInfo from "./ProductInfo"
 import Posting from "./Posting"
 
 export {
+    Landing,
     Home,
     Upload,
     Login,

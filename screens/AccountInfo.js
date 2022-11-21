@@ -12,8 +12,6 @@ import {
 } from "react-native";
 
 function AccountInfo({ navigation }) {
-//   const [user, setUser] = useState("");
-//   const [password, setPassword] = useState("");
 
   return (
     <View style={styles.container}>
