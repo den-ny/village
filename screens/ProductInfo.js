@@ -10,7 +10,10 @@ import {
   TouchableOpacity,
   Pressable
 } from "react-native";
-import Navbar from "../components/Navbar";
+import FooterNav from "../components/FooterNav";
+
+
+
 function ProductInfo({navigation}) {
     return (
         <View style={styles.container}>
@@ -18,29 +21,38 @@ function ProductInfo({navigation}) {
           {/* <Image style={styles.image} source={require("../assets/.png")} /> */}
      
           
-            <Navbar/>
-        <View>
-            <Text style={styles.image}> Profile Picture </Text>
-            <Text>Name</Text>
-            <Text>Karma Points | Hand Icon</Text>  
-            <Text>+ Points</Text>
-        </View>
-           <View>
-        <Text> My Items     </Text>
-        </View>
-        <View>
-            <Text> Winter Coat</Text>
-            <Text>Electric Bugaloo</Text>
-        </View>
 
-          {/* <TouchableOpacity>
-            <Text style={styles.forgot_button}>Forgot Password?</Text>
-          </TouchableOpacity> */}
-        
-          <Pressable style={styles.loginBtn} >
-            {/* <Text style={styles.loginText} onPress = {() => navigation.navigate("home")} title="LOGIN" >Home</Text> */}
-            <Text>HomeBtn | Bell | + | SEARCH | ...</Text>
+        <View>
+          <View style={styles.imgContainer}>
+          <Image source={require('../images/winter-coat.png')} style={styles.image}/>
+          </View>
+
+          <View style={styles.productDetailContainer}>
+            <View style={styles.productNameContainer}>
+              <Text style={styles.productName}>Winter Coat</Text>
+            </View>
+            <View style={styles.locationContainer}>
+              <Text style={styles.location}>Columbus, OH</Text>  
+            </View>
+            <View style={styles.descriptionContainer}>
+              <Text style={styles.productDescription}>Like-new, gently used winter coat for ages 1-2 years. Bought for my nephew recently and it did not fit him. Hoping it finds someone in need!</Text>
+            </View>
+
+            <View style={styles.btnContainer}>
+            <Pressable style={styles.btn}>
+          <Text style={styles.btnText} title="Place a Hold" onPress={() => navigation.navigate("")}>Place a Hold</Text>
+              </Pressable>
+              <Pressable style={styles.btn}>
+          <Text style={styles.btnText} title="Contact Owner" onPress={() => navigation.navigate("AccountInfo")}>Contact Owner</Text>
           </Pressable>
+            </View>
+
+            <View style={styles.footerNavContainer}>
+            <FooterNav />
+            </View>
+          </View>
+
+        </View>
 
         </View>
       );
@@ -53,46 +65,120 @@ function ProductInfo({navigation}) {
         alignItems: "center",
         justifyContent: "center",
       },
-     
-      image: {
-        marginBottom: 40,
-        borderRadius: 5,
-        backgroundColor: "red",
-        width: "20%",
-        padding: 50,
-      },
-     
-      inputView: {
-        backgroundColor: "#FFC0CB",
-        borderRadius: 30,
-        width: "70%",
-        height: 45,
-        marginBottom: 20,
-     
-        alignItems: "center",
-      },
-     
-      TextInput: {
-        height: 50,
+
+      imgContainer: {
         flex: 1,
-        padding: 10,
-        marginLeft: 20,
-      },
-     
-      forgot_button: {
-        height: 30,
-        marginBottom: 30,
-      },
-     
-      loginBtn: {
-        width: "80%",
-        borderRadius: 25,
-        height: 50,
         alignItems: "center",
         justifyContent: "center",
-        marginTop: 40,
-        backgroundColor: "#FF1493",
+        alignSelf: "center",
+        flexDirection: "row",
+        width: "100%",
+        height: "50%"
       },
+     
+      image: {
+        width: "100%",
+      },
+    
+      productDetailContainer: {
+        flex: 1,
+        flexDirection: "column",
+        alignItems: 'center',
+        width: "100%",
+        // height: "20%",
+        backgroundColor: "#B7B0FE"
+      },
+
+      productNameContainer: {
+        flex: 0.4,
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        width: "100%",
+        height: "90%",
+        marginLeft: 30,
+        marginTop: 30,
+      },
+
+      productName: {
+        fontSize: 32,
+        width: "100%",
+        fontWeight: "700",
+        color: "#FFFEF8",
+        fontFamily: "Times New Roman",
+      },
+
+      locationContainer: {
+        flex: 0.2,
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        width: "100%",
+        height: "0%",
+
+        // marginTop: 30,
+      },
+
+      location: {
+        fontSize: 14,
+        width: "100%",
+        fontWeight: "500",
+        // marginBottom: 0,
+        color: "#FFF",
+        fontFamily: "Times New Roman",
+        marginLeft: 40,
+
+      },
+
+      descriptionContainer: {
+        flex: 1.25,
+        width: "80%",
+
+      },
+
+      productDescription: {
+        fontSize: 18,
+        fontFamily: "Times New Roman",
+        color: "#FFFEF8",
+        fontWeight: "600",
+        marginTop: 20,
+      },
+
+      btnContainer: {
+        flex: 0.4,
+        width: "80%",
+        height: "10%",
+        flexDirection: "row",
+        alignContent: "center",
+        justifyItems: "center",
+        justifyContent: "space-evenly",
+        padding: 4,
+        marginBottom: 20
+      },
+
+      btn: {
+        backgroundColor: "#403A7A",
+        borderRadius: 8,
+        width: "45%",
+        height: "100%",
+        padding: 4,
+        alignItems: "center",
+        justifyContent: "center",
+        
+      },
+
+      btnText: {
+        color: "#FFFEF8",
+        fontSize: 12,
+      },
+
+      footerNavContainer: {
+        flex: 1,
+        flexDirection: "column",
+        alignContent: "center",
+        justifyContent: "flex-start",
+        width: "100%",
+      }
+
+
     });
 
     export default ProductInfo;
