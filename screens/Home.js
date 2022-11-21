@@ -55,7 +55,7 @@ import {
               source={require("../assets/winter-coat.png")}
             >
               <View style={styles.imageContainer}>
-                <Text style={styles.text}>Winter Coat</Text>
+                <Text style={styles.text} onPress={() => navigation.navigate("ProductInfo")}>Winter Coat</Text>
               </View>
             </ImageBackground>
   
