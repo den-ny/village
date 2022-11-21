@@ -10,7 +10,10 @@ import {
   TouchableOpacity,
   Pressable
 } from "react-native";
-import Navbar from "../components/Navbar";
+import FooterNav from "../components/FooterNav";
+
+
+
 function ProductInfo({navigation}) {
     return (
         <View style={styles.container}>
@@ -42,6 +45,10 @@ function ProductInfo({navigation}) {
               <Pressable style={styles.btn}>
           <Text style={styles.btnText} title="Contact Owner" onPress={() => navigation.navigate("AccountInfo")}>Contact Owner</Text>
           </Pressable>
+            </View>
+
+            <View style={styles.footerNavContainer}>
+            <FooterNav />
             </View>
           </View>
 
@@ -83,7 +90,7 @@ function ProductInfo({navigation}) {
       },
 
       productNameContainer: {
-        flex: 0.6,
+        flex: 0.4,
         flexDirection: "row",
         justifyContent: "flex-start",
         width: "100%",
@@ -101,11 +108,12 @@ function ProductInfo({navigation}) {
       },
 
       locationContainer: {
-        flex: 0.6,
+        flex: 0.2,
         flexDirection: "row",
         justifyContent: "flex-start",
         width: "100%",
         height: "0%",
+
         // marginTop: 30,
       },
 
@@ -117,11 +125,13 @@ function ProductInfo({navigation}) {
         color: "#FFF",
         fontFamily: "Times New Roman",
         marginLeft: 40,
+
       },
 
       descriptionContainer: {
-        flex: 2,
+        flex: 1.25,
         width: "80%",
+
       },
 
       productDescription: {
@@ -129,10 +139,11 @@ function ProductInfo({navigation}) {
         fontFamily: "Times New Roman",
         color: "#FFFEF8",
         fontWeight: "600",
+        marginTop: 20,
       },
 
       btnContainer: {
-        flex: 2,
+        flex: 0.4,
         width: "80%",
         height: "10%",
         flexDirection: "row",
@@ -140,21 +151,31 @@ function ProductInfo({navigation}) {
         justifyItems: "center",
         justifyContent: "space-evenly",
         padding: 4,
+        marginBottom: 20
       },
 
       btn: {
         backgroundColor: "#403A7A",
         borderRadius: 8,
         width: "45%",
-        height: "25%",
+        height: "100%",
         padding: 4,
         alignItems: "center",
         justifyContent: "center",
+        
       },
 
       btnText: {
         color: "#FFFEF8",
         fontSize: 12,
+      },
+
+      footerNavContainer: {
+        flex: 1,
+        flexDirection: "column",
+        alignContent: "center",
+        justifyContent: "flex-start",
+        width: "100%",
       }
 
 
