@@ -35,7 +35,7 @@ function Login({ navigation }) {
 
         <View style={styles.messageContainer}>
           <View style={styles.left}>
-            <Image source={require('../images/santa-pic.png')} />
+            <Image style={styles.profPic} source={require('../images/santa-pic.png')} />
           </View>
           <View style={styles.right}>
             <Text style={styles.lineOne}>Santa</Text>
@@ -115,76 +115,71 @@ const styles = StyleSheet.create({
   },
 
   header: {
-    flex: 0.25,
+    flex: 0.2,
     flexDirection: "row",
+    alignContent: "center",
     width: "100%",
     fontSize: 36,
-    fontWeight: "bold",
-    // marginBottom: 10,
-    color: "#978DF3",
+    fontWeight: "#500",
+    color: "#000",
     fontFamily: "Times New Roman",
-    borderWidth: 1,
-    borderColor: "black"
+    marginLeft: 20,
   },
 
   messageContainer: {
-    flex: 0.65,
+    flex: 0.19,
     flexDirection: "row",
     alignItems: "center",
     width: "80%",
-    borderWidth: 1,
-    borderColor: "black"
+    marginBottom: 15,
+    borderRadius: 15,
+    backgroundColor: "#978DF3"
   },
 
-  // messageContainerTwo: {
-  //   flex: 0.65,
-  //   flexDirection: "row",
-  //   width: "80%",
-  //   borderWidth: 1,
-  //   borderColor: "red"
-  // },
-
-  // messageContainerThree: {
-  //   flex: 0.65,
-  //   flexDirection: "row",
-  //   width: "80%",
-  //   borderWidth: 1,
-  //   borderColor: "blue"
-  // },
-
-  // messageContainerFour: {
-  //   flex: 0.65,
-  //   flexDirection: "row",
-  //   width: "80%",
-  //   borderWidth: 1,
-  //   borderColor: "green"
-  // },
-
-  // messageContainerFive: {
-  //   flex: 0.65,
-  //   flexDirection: "row",
-  //   width: "80%",
-  //   borderWidth: 1,
-  //   borderColor: "purple"
-  // },
-
   footerNavContainer: {
-    flex: 0.35,
-    borderWidth: 1,
-    borderColor: "black"
+    flex: 0.25,
+
   },
 
   left: {
     flex: 1,
-    marginLeft: 20,
-    marginRight: 20,
+    marginLeft: 10,
+    marginRight: 10,
     flexDirection: "column"
   },
 
   right: {
-    marginLeft: 20,
+    marginLeft: 10,
+    marginRight: 10,
+    padding: 10,
+    flexDirection: "column",
+    width: "75%",
+  },
+
+  lineOne: {
+    color: "black",
+    fontWeight: "500",
+    marginBottom: 10,
+    // marginLeft: 5,
     marginRight: 20,
-    padding: 10
+  },
+
+  lineTwo: {
+    color: "#FFF",
+    marginBottom: 10,
+    // marginLeft: 5,
+    marginRight: 10,
+  },
+
+  lineThree: {
+    color: "#FFF",
+    marginBottom: 10,
+    // marginLeft: 15,
+    marginRight: 20,
+    fontSize: 12,
+  },
+
+  profPic: {
   }
 });
 
