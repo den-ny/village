@@ -17,16 +17,14 @@ function Login({navigation}) {
     const [name, setName] = useState('');
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
-    return (
+  return (
+      
         <SafeAreaView style={styles.container}>
         {/* <Image style={styles.image} source={require("../assets/.png")} /> */}
-
-        <Navbar />    
-          {/* <View style={styles.navbar}>
-              <Button title="MENU BUtton"></Button>
-              <Text>The Village</Text>
-              <Button title="Pic"></Button>
-        </View> */}
+        <StatusBar style="auto" />
+        <View style={styles.titleContainer}>
+          <Text style={styles.titleText}>Village</Text>
+        </View>
         
         <View style={styles.headerTopContainer}>
           <Text style={styles.headerTop}>What are you looking for? </Text>
@@ -35,50 +33,52 @@ function Login({navigation}) {
         <View style={styles.categories}>
           <View style={styles.categoriesTop}>
             <Pressable style={styles.categoryBtn}>
-            <Text style={styles.loginText} title="Clothing">Clothing</Text>
+            <Text style={styles.catText} title="Clothing">Clothing</Text>
             </Pressable>
             <Pressable style={styles.categoryBtn}>
-            <Text style={styles.loginText} title="Toys">Toys</Text>
+            <Text style={styles.catText} title="Toys">Toys</Text>
             </Pressable>
             <Pressable style={styles.categoryBtn}>
-            <Text style={styles.loginText} title="Books">Books</Text>
+            <Text style={styles.catText} title="Books">Books</Text>
             </Pressable>
           </View>
 
           <View style={styles.categoriesMidOne}>
             <Pressable style={styles.categoryBtn}>
-            <Text style={styles.loginText} title="Coats">Coats</Text>
+            <Text style={styles.catText} title="Coats">Coats</Text>
             </Pressable>
             <Pressable style={styles.categoryBtn}>
-            <Text style={styles.loginText} title="Shoes">Shoes</Text>
+            <Text style={styles.catText} title="Shoes">Shoes</Text>
             </Pressable>
           </View>
 
           <View style={styles.categoriesMidTwo}>
             <Pressable style={styles.categoryBtn}>
-            <Text style={styles.loginText} title="Education">Education</Text>
+            <Text style={styles.catText} title="Education">Education</Text>
             </Pressable>
             <Pressable style={styles.categoryBtn}>
-            <Text style={styles.loginText} title="Infant">Infant</Text>
+            <Text style={styles.catText} title="Infant">Infant</Text>
             </Pressable>
             <Pressable style={styles.categoryBtn}>
-            <Text style={styles.loginText} title="Stuffed">Stuffed</Text>
+            <Text style={styles.catText} title="Stuffed">Stuffed</Text>
             </Pressable>
           </View>
 
           <View style={styles.categoriesBottom}>
             <Pressable style={styles.categoryBtn}>
-            <Text style={styles.loginText} title="Games">Games</Text>
+            <Text style={styles.catText} title="Games">Games</Text>
             </Pressable>
             <Pressable style={styles.categoryBtn}>
-            <Text style={styles.loginText} title="Toddler">Toddler</Text>
+            <Text style={styles.catText} title="Toddler">Toddler</Text>
             </Pressable>
           </View>
         </View>
 
            
-            <Text>Tell us about yourself</Text>
-          <StatusBar style="auto" />
+        <View style={styles.headerTopContainer}>
+          <Text style={styles.headerTop}>Tell us about yourself! </Text>
+        </View>
+          
           
           
           <View style={styles.inputView}>
@@ -114,9 +114,9 @@ function Login({navigation}) {
             <Text style={styles.forgot_button}>Forgot Password?</Text>
           </TouchableOpacity> */}
      
-          <TouchableOpacity style={styles.loginBtn}>
-            <Button style={styles.loginText} title="Lets GO!" onPress = {() => navigation.navigate("home")}></Button>
-          </TouchableOpacity>
+     <Pressable style={styles.loginBtn}>
+          <Text style={styles.loginText} title="Log In" onPress={() => navigation.navigate("home")}>Let's Go!</Text>
+          </Pressable>
         </SafeAreaView>
       );
     }
@@ -129,6 +129,17 @@ function Login({navigation}) {
         alignItems: "center",
         justifyContent: "center",
       },
+
+      titleContainer: {
+        flex: 0.2,
+        fontSize: 32,
+      },
+
+      titleText: {
+        fontSize: 32,
+        fontWeight: "450",
+        fontFamily: "Times New Roman"
+      },
      
       image: {
         marginBottom: 40,
@@ -136,13 +147,13 @@ function Login({navigation}) {
      
       inputView: {
         backgroundColor: "#fff",
-        borderRadius: 30,
+        borderRadius: 10,
         borderWidth: 1,
         borderColor: "#978DF3",
         width: "70%",
-        height: 45,
+        height: 40,
         marginBottom: 20,
-        alignItems: "center",
+        alignItems: "flex-start",
       },
      
       TextInput: {
@@ -158,63 +169,59 @@ function Login({navigation}) {
       },
      
       loginBtn: {
-        width: "80%",
+        width: "50%",
         borderRadius: 25,
         height: 50,
         alignItems: "center",
         justifyContent: "center",
         marginTop: 40,
-        backgroundColor: "#978DF3",
+        backgroundColor: "#6A62B7",
       },
 
       top:{
         backgroundColor: "red",
-        // flexDirection: "column",
         flex: 1,
       },
 
-      // navbar: {
-      //   flex: 1,
-      //   flexDirection: "row",
-      //   alignItems: "flex-start",
-      //   justifyContent: "space-between",
-      //   height: 45,
-      //   width: "100%",
-      // },
-
       headerTopContainer: {
-        flex: 1,
+        flex: 0.1,
         flexDirection: "row",
         justifyContent: "flex-start",
         width: "100%",
         height: "100%",
         marginLeft: 40,
+
       },
 
       headerTop: {
         fontSize: 20,
-        fontWeight: "400",
+        fontWeight: "4500",
         fontFamily: "Times New Roman"
       },
 
       categories: {
-        flex: 1,
+        flex: 0.4,
         flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "100%",
-        borderWidth: 1,
-        borderRadius: 25,
-        borderColor: "gray"
+        alignItems: "space-evenly",
+        justifyContent: "space-evenly",
+        width: "90%",
+        padding: 5,
+        margin: 5,
       },
 
       categoryBtn: {
+        flexDirection: "row",
+        alignContent: "center",
         justifyContent: "center",
-
+        alignItems: "center",
+        marginLeft: 20,
+        marginRight: 15,
+        width: "25%",
+        height: "95%",
         // width: "100%",
         borderWidth: 1,
         borderRadius: 25,
-        borderColor: "gray"
+        borderColor: "#978DF3"
       },
 
       categoriesTop: {
@@ -222,9 +229,10 @@ function Login({navigation}) {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
-        padding: 10,
+        padding: 5,
         height: "100%",
         width: "100%",
+
       },
 
       categoriesMidOne: {
@@ -232,7 +240,7 @@ function Login({navigation}) {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
-        padding: 10,
+        padding: 5,
         height: "100%",
         width: "100%",
       },
@@ -242,7 +250,7 @@ function Login({navigation}) {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
-        padding: 10,
+        padding: 5,
         height: "100%",
         width: "100%",
       },
@@ -252,10 +260,19 @@ function Login({navigation}) {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
-        padding: 10,
+        padding: 5,
         height: "100%",
         width: "100%",
+        marginBottom: 20,
       },
+
+      catText: {
+        color: "#6A62B7"
+      },
+
+      loginText: {
+        color: "#FFF"
+      }
 
     });
 
