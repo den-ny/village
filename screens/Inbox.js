@@ -38,9 +38,9 @@ function Login({ navigation }) {
             <Image style={styles.profPic} source={require('../images/santa-pic.png')} />
           </View>
           <View style={styles.right}>
-            <Text style={styles.lineOne}>Santa</Text>
-            <Text style={styles.lineTwo}>Do you still have the rabbit?</Text>
-            <Text style={styles.lineThree}>On Nov. 13 4:35 PM</Text>
+            <Text style={styles.lineOne} onPress={() => navigation.navigate("Message")}>Santa</Text>
+            <Text style={styles.lineTwo} onPress={() => navigation.navigate("Message")}>Do you still have the rabbit?</Text>
+            <Text style={styles.lineThree} onPress={() => navigation.navigate("Message")}>On Nov. 13 4:35 PM</Text>
           </View>
         </View>
       

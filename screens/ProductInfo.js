@@ -43,7 +43,7 @@ function ProductInfo({navigation}) {
           <Text style={styles.btnText} title="Place a Hold" onPress={() => navigation.navigate("")}>Place a Hold</Text>
               </Pressable>
               <Pressable style={styles.btn}>
-          <Text style={styles.btnText} title="Contact Owner" onPress={() => navigation.navigate("AccountInfo")}>Contact Owner</Text>
+          <Text style={styles.btnText} title="Contact Owner" onPress={() => navigation.navigate("Account Info")}>Contact Owner</Text>
           </Pressable>
             </View>
 
