@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import {
   StyleSheet,
@@ -10,16 +11,16 @@ import {
   Pressable,
 } from "react-native";
 
-function Landing({ navigation }) {
+function Landing() {
 
-  //source={require('../assets/landing_bear.png')}
+  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
 
       {/* Big Pic Section */}
       <View style={styles.bigPic_wrapper}>
-          <Image style={styles.bigPic_image} source={require('../assets/landing_bear.png')}></Image>
+          <Image style={styles.bigPic_image} source={require('../assets/teddy_bear_landing.png')}></Image>
       </View>
       
       {/* Branding Section */}
@@ -36,11 +37,13 @@ function Landing({ navigation }) {
 
       {/* Buttons Section */}
       <View style={styles.buttons}>
-        <View style={styles.buttons_signup}>
-          <Button title={"Get Started"} color={'#FFFEF8'}></Button>
-        </View>
+        <Pressable style={styles.buttons_signup}>
+          <Text style={styles.buttons_signup_text} onPress={() => navigation.navigate("SignUp")}>Get Started</Text>
+        </Pressable>
         <View style={styles.buttons_login}>
-          <Button title={"Log In"} style={styles.buttons_login}></Button>
+          <Pressable>
+            <Text style={styles.buttons_login} onPress={() => navigation.navigate("Login")}>Log In</Text>
+          </Pressable>
         </View>
       </View>
     </View>
@@ -130,15 +133,20 @@ const styles = StyleSheet.create({
   buttons_signup: {
     width: 200,
     height: 60,
-    backgroundColor: '#F53535',
+    backgroundColor: '#B7B0FE',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 60,
-    marginTop: 20
+    marginTop: 20,
+  },
+
+  buttons_signup_text: {
+    color: '#FFFEF8'
   },
 
   buttons_login: {
-    marginTop: 15
+    marginTop: 15,
+    color: '#B7B0FE'
   }
   
 });
