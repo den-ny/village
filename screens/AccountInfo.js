@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
-import React, { useState } from "react";
+import React from "react";
+import FooterNav from "../components/FooterNav"
 import {
   StyleSheet,
   Text,
@@ -16,15 +17,6 @@ function AccountInfo({ navigation }) {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      {/* <Image style={styles.image} source={require("../assets/.png")} /> */}
-
-      {/* NavBar */}
-        {/* <View style={styles.navBar}>
-            <Button title="="></Button>
-            <Text>Karen T </Text>
-            <Button title="Setting"></Button>
-        </View> */}
-      {/* List of messages */}
 
       {/* Profile Info Section */}
       <View style={styles.profile}>
@@ -82,24 +74,10 @@ function AccountInfo({ navigation }) {
           </View>
       </View>
 
-      {/* Would put Menu Here */}
-      <View style={styles.bottom}>
-
+      {/* Footer Nav Section */}
+      <View style={styles.footerNav}>
+        <FooterNav></FooterNav>
       </View>
-
-      {/* <TouchableOpacity>
-            <Text style={styles.forgot_button}>Forgot Password?</Text>
-          </TouchableOpacity> */}
-
-      {/* <Pressable style={styles.loginBtn}>
-        <Text
-          style={styles.loginText}
-          title="Log In"
-          onPress={() => navigation.navigate("home")}
-        >
-          Log In
-        </Text>
-      </Pressable> */}
     </View>
   );
 }
@@ -158,8 +136,8 @@ const styles = StyleSheet.create({
     paddingTop: '5%'
   },
 
-  //Space on the bottom
-  bottom: {
+  //Space on the footerNav
+  footerNav: {
     flex: 0.8
   },
 

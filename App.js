@@ -25,11 +25,11 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: true }}>
-        <Stack.Screen name="Landing" component={Landing} />
+        {/* <Stack.Screen name="Landing" component={Landing} /> */}
         {/* <Stack.Screen name="capture" component={Capture} /> */}
-        <Stack.Screen name="SignUp" component={Register} />
+        {/* <Stack.Screen name="SignUp" component={Register} />
         <Stack.Screen name="Inbox" component={Inbox} />
-        <Stack.Screen name="Message" component={Message} />
+        <Stack.Screen name="Message" component={Message} /> */}
         
         <Stack.Screen name="Account Info" component={AccountInfo} />
         <Stack.Screen name="ProductInfo" component={ProductInfo} />
