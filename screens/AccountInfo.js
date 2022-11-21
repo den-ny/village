@@ -40,12 +40,25 @@ function AccountInfo({ navigation }) {
           {/* <Text style={styles.lineThree}>Location</Text> */}
         </View>
       </View>
+
+      <Text styles={styles.title}>My Posts:</Text>
       
       {/* My Posts Section */}
       <View style={styles.myPost}>
-        <Text>My Posts:</Text>
-        <Text>BEAR</Text>
-        <Text>Rocking Horse</Text>
+        <View styles={styles.myPost_item}>
+          <Text styles={styles.myPost_item_image}>Image</Text>
+          <View styles={styles.myPost_item_details}>
+            <Text styles={styles.myPost_item_name}>Teddy Bear</Text>
+            <Text styles={styles.myPost_item_value}>+120 KP</Text>
+          </View>
+        </View>
+        <View styles={styles.myPost_item}>
+          <Text styles={styles.myPost_item_image}>Image</Text>
+          <View styles={styles.myPost_item_details}>
+            <Text styles={styles.myPost_item_name}>Rocking Horse</Text>
+            <Text styles={styles.myPost_item_value}>+1,000 KP</Text>
+          </View>
+        </View>
       </View>
 
       {/* Looking For Section */}
@@ -109,7 +122,11 @@ const styles = StyleSheet.create({
   myPost: {
     backgroundColor: "orange",
     width: '100%',
-    flex: 1
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+
   },
 
   //Looking For
@@ -146,12 +163,38 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
 
-  profile_lineOne: {
+  // profile_lineOne: {
 
-  },
+  // },
 
   /* !!!!!!!!!!!!!!!!! My Posts !!!!!!!!!!!!!!!!! */
 
+  title: {
+    color: '#55FF33'
+  },
+
+  myPost_item: {
+    backgroundColor: '#FF99EE',
+    width: '45%',
+    height: '45%',
+    flex: 1
+  },
+
+  myPost_item_image: {
+
+  },
+
+  myPost_item_details: {
+
+  },
+
+  myPost_item_name: {
+
+  },
+
+  myPost_item_value: {
+
+  },
 
   /* !!!!!!!!!!!!!!!!! Looking For !!!!!!!!!!!!!!!!! */
 
