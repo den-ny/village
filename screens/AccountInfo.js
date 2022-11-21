@@ -31,44 +31,55 @@ function AccountInfo({ navigation }) {
       {/* Profile Info Section */}
       <View style={styles.profile}>
         <View style={styles.profile_left}>
-          <Text style={styles.profile_image}>Profile Pic</Text>
+          <Image style={styles.profile_image} source={require('../assets/rocking-horse.png')}></Image>
         </View>
         <View style={styles.profile_right}>
           <Text style={styles.profile_lineOne}>Karma Points</Text>
           <Text style={styles.profile_lineTwo}>320 KP</Text>
           <Text style={styles.profile_lineThree}>Columbus, OH</Text>
-          {/* <Text style={styles.lineThree}>Location</Text> */}
         </View>
       </View>
-
-      <Text styles={styles.title}>My Posts:</Text>
       
       {/* My Posts Section */}
       <View style={styles.myPost}>
-        <View styles={styles.myPost_item}>
-          <Text styles={styles.myPost_item_image}>Image</Text>
-          <View styles={styles.myPost_item_details}>
-            <Text styles={styles.myPost_item_name}>Teddy Bear</Text>
-            <Text styles={styles.myPost_item_value}>+120 KP</Text>
+        <Text style={styles.myPost_title}>My Posts:</Text>
+        <View style={styles.myPost_item}>
+          <Image style={styles.myPost_item_image} source={require('../assets/rocking-horse.png')}></Image>
+          <View style={styles.myPost_item_details}>
+            <Text style={styles.myPost_item_name}>Rocking Horse</Text>
+            <Text style={styles.myPost_item_value}>+1,000 KP</Text>
           </View>
         </View>
-        <View styles={styles.myPost_item}>
-          <Text styles={styles.myPost_item_image}>Image</Text>
-          <View styles={styles.myPost_item_details}>
-            <Text styles={styles.myPost_item_name}>Rocking Horse</Text>
-            <Text styles={styles.myPost_item_value}>+1,000 KP</Text>
+        <View style={styles.myPost_item}>
+          <Image style={styles.myPost_item_image} source={require('../assets/onesie.png')}></Image>
+          <View style={styles.myPost_item_details}>
+            <Text style={styles.myPost_item_name}>Onesie</Text>
+            <Text style={styles.myPost_item_value}>+300 KP</Text>
           </View>
         </View>
       </View>
 
       {/* Looking For Section */}
       <View style={styles.lookingFor}>
-        <Text>Looking For:</Text>
-        <Text>Winter Coat</Text>
-        <Text>Doll House</Text>
+        <Text style={styles.lookingFor_title}>Looking For:</Text>
+          <View style={styles.lookingFor_item}>
+            <Image style={styles.lookingFor_item_image } source={require('../assets/tutu-dress.png')}></Image>
+            <View style={styles.lookingFor_item_details}>
+              <Text style={styles.lookingFor_item_name}>Teddy Bear</Text>
+            </View>
+          </View>
+          <View style={styles.lookingFor_item}>
+            <Image style={styles.lookingFor_item_image} source={require('../assets/raincoat.png')}></Image>
+            <View style={styles.lookingFor_item_details}>
+              <Text style={styles.lookingFor_item_name}>Raincoat</Text>
+            </View>
+          </View>
       </View>
 
+      {/* Would put Menu Here */}
+      <View style={styles.bottom}>
 
+      </View>
 
       {/* <TouchableOpacity>
             <Text style={styles.forgot_button}>Forgot Password?</Text>
@@ -120,27 +131,38 @@ const styles = StyleSheet.create({
 
   //My Posts
   myPost: {
-    backgroundColor: "orange",
+    backgroundColor: "#FFFEF8",
     width: '100%',
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignItems: 'center',
+    paddingTop: '5%'
 
   },
 
   //Looking For
   lookingFor: {
-    backgroundColor: "yellow",
+    backgroundColor: "#FFFEF8",
     width: '100%',
-    flex: 1.3
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    paddingTop: '5%'
+  },
+
+  //Space on the bottom
+  bottom: {
+    flex: 0.8
   },
 
   /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Child Styles &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
   /* !!!!!!!!!!!!!!!!! Profile !!!!!!!!!!!!!!!!! */
+
   profile_left: {
-    backgroundColor: '#99BBFF',
+    backgroundColor: '#FFFEF8',
     height: '90%',
     width: '45%',
     justifyContent: 'center',
@@ -150,8 +172,8 @@ const styles = StyleSheet.create({
   profile_image: {
     width: '90%',
     height: '90%',
-    borderRadius: '50%',
-    backgroundColor: '#FF6619'
+    borderRadius: '70%',
+    backgroundColor: '#FF6619',
   },
 
   profile_right: {
@@ -163,93 +185,108 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
 
-  // profile_lineOne: {
+  profile_lineTwo: {
 
-  // },
+  },
+
+  profile_lineThree: {
+
+  },
+
+  profile_lineFour: {
+
+  },
 
   /* !!!!!!!!!!!!!!!!! My Posts !!!!!!!!!!!!!!!!! */
 
-  title: {
-    color: '#55FF33'
+  myPost_title: {
+    position: 'absolute',
+    top: '5%',
+    left: '6%',
+    fontSize: 16,
+    color: 'black',
   },
 
   myPost_item: {
-    backgroundColor: '#FF99EE',
+    backgroundColor: '#FFFEF8',
     width: '45%',
-    height: '45%',
-    flex: 1
+    height: '70%',
+    borderRadius: 25,
+    padding: 0
   },
 
   myPost_item_image: {
-
+    borderRadius: 25,
+    resizeMode: 'contain',
+    height: '100%',
+    width: '100%'
   },
 
   myPost_item_details: {
-
+    position: 'absolute',
+    width: '100%',
+    bottom: '0%',
+    height: '50%',
+    backgroundColor: 'rgba(151,141,243,0.80)',
+    opacity: '5%',
+    borderRadius: 25,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
 
   myPost_item_name: {
-
+    position: 'absolute',
+    color: '#FFFEF8',
+    top: '10%',
+    left: '10%',
   },
 
   myPost_item_value: {
-
+    color: '#FFFEF8',
   },
 
   /* !!!!!!!!!!!!!!!!! Looking For !!!!!!!!!!!!!!!!! */
 
-  image: {
-    marginBottom: 40,  
+  lookingFor_title: {
+    position: 'absolute',
+    top: '5%',
+    left: '6%',
+    fontSize: 16,
+    color: 'black',
   },
 
-  inputView: {
-    backgroundColor: "#fff",
-    borderRadius: 30,
-    borderWidth: 1,
-    borderColor: "gray",
-    width: "70%",
-    height: 45,
-    marginBottom: 20,
-
-    alignItems: "center",
-  },
-
-  TextInput: {
-    height: 50,
-    flex: 1,
-    padding: 10,
-    marginLeft: 20,
-  },
-
-  forgot_button: {
-    height: 30,
-    marginBottom: 30,
-  },
-
-  loginBtn: {
-    width: "60%",
+  lookingFor_item: {
+    backgroundColor: '#FFFEF8',
+    width: '45%',
+    height: '70%',
     borderRadius: 25,
-    height: 50,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 40,
-    color: "#fff",
-    backgroundColor: "#978DF3",
-    marginTop: 100,
+    padding: 0
   },
 
-  loginText: {
-    color: "#fff",
-    fontSize: 20,
-    fontWeight: "semi-bold",
+  lookingFor_item_image: {
+    borderRadius: 25,
+    resizeMode: 'contain',
+    height: '100%',
+    width: '100%'
   },
 
-  header: {
-    fontSize: 36,
-    fontWeight: "bold",
-    marginBottom: 100,
-    color: "#978DF3",
-    fontFamily: "Times New Roman",
+  lookingFor_item_details: {
+    position: 'absolute',
+    width: '100%',
+    bottom: '0%',
+    height: '50%',
+    backgroundColor: 'rgba(151,141,243,0.80)',
+    opacity: '5%',
+    borderRadius: 25,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+
+  lookingFor_item_name: {
+    position: 'absolute',
+    color: '#FFFEF8',
+    top: '10%',
+    left: '10%',
   },
 });
 
