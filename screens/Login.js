@@ -68,14 +68,13 @@ function Login({navigation}) {
      
       inputView: {
         backgroundColor: "#fff",
-        borderRadius: 30,
+        borderRadius: 10,
         borderWidth: 1,
-        borderColor: "gray",
+        borderColor: "#978DF3",
         width: "70%",
-        height: 45,
+        height: 40,
         marginBottom: 20,
-     
-        alignItems: "center",
+        alignItems: "flex-start",
       },
      
       TextInput: {
