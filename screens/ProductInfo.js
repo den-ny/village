@@ -21,29 +21,31 @@ function ProductInfo({navigation}) {
 
         <View>
           <View style={styles.imgContainer}>
-
-          <Image source={require('../images/temporary-coat.jpg')} style={styles.image}/>
+          <Image source={require('../images/winter-coat.png')} style={styles.image}/>
           </View>
-            <Text style={styles.productName}>Winter Coat</Text>
-            <Text style={styles.location}>Columbus, OH</Text>  
-            <Text style={styles.productDescription}>Like-new, gently used winter coat for ages 1-2 years. Bought for my nephew recently and it did not fit him. Hoping it finds someone in need!</Text>
-        </View>
-           <View>
-        <Text> My Items     </Text>
-        </View>
-        <View>
-            <Text> Winter Coat</Text>
-            <Text>Electric Bugaloo</Text>
-        </View>
 
-          {/* <TouchableOpacity>
-            <Text style={styles.forgot_button}>Forgot Password?</Text>
-          </TouchableOpacity> */}
-        
-          <Pressable style={styles.loginBtn} >
-            {/* <Text style={styles.loginText} onPress = {() => navigation.navigate("home")} title="LOGIN" >Home</Text> */}
-            <Text>HomeBtn | Bell | + | SEARCH | ...</Text>
+          <View style={styles.productDetailContainer}>
+            <View style={styles.productNameContainer}>
+              <Text style={styles.productName}>Winter Coat</Text>
+            </View>
+            <View style={styles.locationContainer}>
+              <Text style={styles.location}>Columbus, OH</Text>  
+            </View>
+            <View style={styles.descriptionContainer}>
+              <Text style={styles.productDescription}>Like-new, gently used winter coat for ages 1-2 years. Bought for my nephew recently and it did not fit him. Hoping it finds someone in need!</Text>
+            </View>
+
+            <View style={styles.btnContainer}>
+            <Pressable style={styles.btn}>
+          <Text style={styles.btnText} title="Place a Hold" onPress={() => navigation.navigate("")}>Place a Hold</Text>
+              </Pressable>
+              <Pressable style={styles.btn}>
+          <Text style={styles.btnText} title="Contact Owner" onPress={() => navigation.navigate("AccountInfo")}>Contact Owner</Text>
           </Pressable>
+            </View>
+          </View>
+
+        </View>
 
         </View>
       );
@@ -61,53 +63,101 @@ function ProductInfo({navigation}) {
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
+        alignSelf: "center",
         flexDirection: "row",
         width: "100%",
         height: "50%"
       },
      
       image: {
-        // flex: 1,
-        // alignItems: "center",
-        // justifyContent: "center",
-        marginBottom: 40,
-        borderRadius: 5,
-        // backgroundColor: "red",
         width: "100%",
-        padding: 50,
       },
-     
-      inputView: {
-        backgroundColor: "#FFC0CB",
-        borderRadius: 30,
-        width: "70%",
-        height: 45,
-        marginBottom: 20,
-     
-        alignItems: "center",
-      },
-     
-      TextInput: {
-        height: 50,
+    
+      productDetailContainer: {
         flex: 1,
-        padding: 10,
-        marginLeft: 20,
+        flexDirection: "column",
+        alignItems: 'center',
+        width: "100%",
+        // height: "20%",
+        backgroundColor: "#B7B0FE"
       },
-     
-      forgot_button: {
-        height: 30,
-        marginBottom: 30,
+
+      productNameContainer: {
+        flex: 0.6,
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        width: "100%",
+        height: "90%",
+        marginLeft: 30,
+        marginTop: 30,
       },
-     
-      loginBtn: {
+
+      productName: {
+        fontSize: 32,
+        width: "100%",
+        fontWeight: "700",
+        color: "#FFFEF8",
+        fontFamily: "Times New Roman",
+      },
+
+      locationContainer: {
+        flex: 0.6,
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        width: "100%",
+        height: "0%",
+        // marginTop: 30,
+      },
+
+      location: {
+        fontSize: 14,
+        width: "100%",
+        fontWeight: "500",
+        // marginBottom: 0,
+        color: "#FFF",
+        fontFamily: "Times New Roman",
+        marginLeft: 40,
+      },
+
+      descriptionContainer: {
+        flex: 2,
         width: "80%",
-        borderRadius: 25,
-        height: 50,
+      },
+
+      productDescription: {
+        fontSize: 18,
+        fontFamily: "Times New Roman",
+        color: "#FFFEF8",
+        fontWeight: "600",
+      },
+
+      btnContainer: {
+        flex: 2,
+        width: "80%",
+        height: "10%",
+        flexDirection: "row",
+        alignContent: "center",
+        justifyItems: "center",
+        justifyContent: "space-evenly",
+        padding: 4,
+      },
+
+      btn: {
+        backgroundColor: "#403A7A",
+        borderRadius: 8,
+        width: "45%",
+        height: "25%",
+        padding: 4,
         alignItems: "center",
         justifyContent: "center",
-        marginTop: 40,
-        backgroundColor: "#FF1493",
       },
+
+      btnText: {
+        color: "#FFFEF8",
+        fontSize: 12,
+      }
+
+
     });
 
     export default ProductInfo;
