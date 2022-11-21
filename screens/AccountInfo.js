@@ -12,8 +12,6 @@ import {
 } from "react-native";
 
 function AccountInfo({ navigation }) {
-//   const [user, setUser] = useState("");
-//   const [password, setPassword] = useState("");
 
   return (
     <View style={styles.container}>
@@ -31,12 +29,20 @@ function AccountInfo({ navigation }) {
       {/* Profile Info Section */}
       <View style={styles.profile}>
         <View style={styles.profile_left}>
-          <Image style={styles.profile_image} source={require('../assets/rocking-horse.png')}></Image>
+          <Image style={styles.profile_image} source={require('../assets/profilepic.png')}></Image>
         </View>
         <View style={styles.profile_right}>
-          <Text style={styles.profile_lineOne}>Karma Points</Text>
-          <Text style={styles.profile_lineTwo}>320 KP</Text>
-          <Text style={styles.profile_lineThree}>Columbus, OH</Text>
+          <View style={styles.profile_lineOne}>
+            <Text style={styles.profile_lineOne_text}>Karma Points</Text>
+          </View>
+          <View style={styles.profile_lineTwo}>
+            <Image style={styles.profile_lineThree_image} source={require('../assets/hand_icon.png')}></Image>
+            <Text style={styles.profile_lineTwo_text}>1300 KP</Text>
+          </View>
+          <View style={styles.profile_lineThree}>
+            <Image style={styles.profile_lineThree_image} source={require('../assets/location_icon.png')}></Image>
+            <Text style={styles.profile_lineThree_text}>Columbus, OH</Text>
+          </View>
         </View>
       </View>
       
@@ -65,7 +71,7 @@ function AccountInfo({ navigation }) {
           <View style={styles.lookingFor_item}>
             <Image style={styles.lookingFor_item_image } source={require('../assets/tutu-dress.png')}></Image>
             <View style={styles.lookingFor_item_details}>
-              <Text style={styles.lookingFor_item_name}>Teddy Bear</Text>
+              <Text style={styles.lookingFor_item_name}>Dress with Tutu</Text>
             </View>
           </View>
           <View style={styles.lookingFor_item}>
@@ -121,7 +127,7 @@ const styles = StyleSheet.create({
 
   //Profile View
   profile: {
-    backgroundColor: "red",
+    backgroundColor: "#FFFEF8",
     width: "100%",
     flex: 1,
     flexDirection:'row',
@@ -177,7 +183,7 @@ const styles = StyleSheet.create({
   },
 
   profile_right: {
-    backgroundColor: '#FF99EE',
+    backgroundColor: '#FFFEF8',
     height: '90%',
     width: '45%',
     flexDirection: 'column',
@@ -185,15 +191,46 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
 
+  profile_lineOne: {
+
+  },
+
+  profile_lineOne_text: {
+    fontSize: 18,
+    marginTop: 15
+  },
+
   profile_lineTwo: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '40%',
+    marginTop: 10,
+  },
+
+  profile_lineTwo_image: {
+    resizeMode: 'contain',
+    height: 25,
+  },
+
+  profile_lineTwo_text: {
 
   },
 
   profile_lineThree: {
-
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '60%',
+    marginTop: 10
   },
 
-  profile_lineFour: {
+  profile_lineThree_image: {
+    resizeMode: 'contain',
+    height: 25,
+  },
+
+  profile_lineThree_text: {
 
   },
 
@@ -203,7 +240,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: '5%',
     left: '6%',
-    fontSize: 16,
+    fontSize: 20,
     color: 'black',
   },
 
@@ -251,7 +288,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: '5%',
     left: '6%',
-    fontSize: 16,
+    fontSize: 20,
+    fontWeight: 'bolder',
     color: 'black',
   },
 
